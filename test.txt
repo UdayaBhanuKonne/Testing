@@ -12,5 +12,5 @@ test_ssh
     [Tags]    ssh
     SSHLibrary.Open Connection    127.0.0.1    port=2223
     SSHLibrary.Login    udaya    udaya
-    SSHLibrary.Start Command    mkdir /tmp/test
+    SSHLibrary.Start Command    mkdir /tmp/test2
     SSHLibrary.Close Connection
