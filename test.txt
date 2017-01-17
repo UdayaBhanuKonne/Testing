@@ -1,0 +1,16 @@
+*** Settings ***
+Library           Selenium2Library    WITH NAME    Selenium2Library    # selenium2library
+Library           SSHLibrary    WITH NAME    SSHLibrary    # SSHLibrary
+
+*** Test Cases ***
+open_browser
+    Open Browser    https://www.yahoo.co.in    chrome
+    Maximize Browser Window
+    Close Browser
+
+test_ssh
+    [Tags]    ssh
+    SSHLibrary.Open Connection    127.0.0.1    port=2223
+    SSHLibrary.Login    udaya    udaya
+    SSHLibrary.Start Command    mkdir /tmp/test
+    SSHLibrary.Close Connection
