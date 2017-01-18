@@ -6,6 +6,7 @@ Library           SSHLibrary    WITH NAME    SSHLibrary    # SSHLibrary
 open_browser
     Open Browser    https://www.facebook.com    chrome
     Maximize Browser Window
+	Capture Page Screenshot
     Close Browser
 
 test_ssh
