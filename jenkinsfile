@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+                sh 'sutas version'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+                sh 'sutas execute -s tests\test.txt'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+                sh 'sutas version'
+            }
+        }
+    }
+}
